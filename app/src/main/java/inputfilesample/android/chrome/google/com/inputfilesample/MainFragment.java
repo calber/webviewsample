@@ -72,6 +72,7 @@ public class MainFragment extends Fragment {
             mWebView.restoreState(savedInstanceState);
         }
 
+
         mWebView.setWebChromeClient(new WebChromeClient() {
             public boolean onShowFileChooser(
                     WebView webView, ValueCallback<Uri[]> filePathCallback,
@@ -183,6 +184,8 @@ public class MainFragment extends Fragment {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             WebView.setWebContentsDebuggingEnabled(true);
         }
+
+        mWebView.addJavascriptInterface(new WebAppInterface(getActivity()), "Android");
 
         // We set the WebViewClient to ensure links are consumed by the WebView rather
         // than passed to a browser if it can
