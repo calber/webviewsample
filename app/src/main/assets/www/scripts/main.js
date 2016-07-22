@@ -21,6 +21,7 @@
 window.onload = function() {
     console.log('window.onload');
     var loadFileBtn = document.querySelector('.loadFileBtn');
+    var toast = document.querySelector('.loadTest');
     var fileInputField = document.querySelector('.hiddenFileInput');
     var img = document.querySelector('img');
 
@@ -37,3 +38,4 @@ window.onload = function() {
         reader.readAsDataURL(evt.target.files[0]);
     });
 };
+
