@@ -131,6 +131,7 @@ public class MainFragment extends Fragment {
             mWebView.loadUrl("file:///android_asset/www/index.html");
         }
 
+        mWebView.loadUrl("javascript: alert(\"loaded\");");
         return rootView;
     }
 

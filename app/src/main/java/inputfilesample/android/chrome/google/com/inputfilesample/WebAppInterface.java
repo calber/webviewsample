@@ -18,5 +18,4 @@ public class WebAppInterface {
     public void showToast(String toast) {
         Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
     }
-
 }
